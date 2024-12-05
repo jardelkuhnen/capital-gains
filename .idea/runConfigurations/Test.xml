@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Test" type="GoTestRunConfiguration" factoryName="Go Test">
+    <module name="capital-gains" />
+    <working_directory value="$PROJECT_DIR$/calculator" />
+    <parameters value=" -testify.m ^Test_Calculate$" />
+    <root_directory value="$PROJECT_DIR$" />
+    <kind value="PACKAGE" />
+    <package value="capital-gains/calculator" />
+    <directory value="$PROJECT_DIR$" />
+    <filePath value="$PROJECT_DIR$" />
+    <framework value="gotest" />
+    <method v="2" />
+  </configuration>
+</component>
