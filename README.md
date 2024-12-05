@@ -5,6 +5,24 @@ Each buy or sell operation is provided on a line, containing the type of operati
 
 Based on the provided input, the application calculates the income tax on capital gains or losses and displays the result.
 
+
+## Technical Decisions
+- **Use of Testify:** Adopted Testify to organize and structure test cases, ensuring better maintainability and readability.
+
+
+- **Separation of Components:** Designed distinct components for reading data from files and standard input, allowing the application to evolve and support additional input methods seamlessly.
+
+##### Next Steps
+The application is designed to be flexible and extensible. Currently, it supports data input via stdin and file-based input. Future enhancements may include:
+
+Providing a library interface for integration into other applications.
+Developing a REST API to enable external services to interact with the calculator.
+
+#### Next Steps
+Evolute app as a service to different ways to consume calculator.
+Currently, is possible from stdin and file input. In a future can be used as a library, or rest-api
+
+
 ## Installing Dependencies
 At the root of the project, run the following command:
 ```bash
