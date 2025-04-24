@@ -4,10 +4,11 @@ import (
 	"capital-gains/input"
 	"encoding/json"
 	"fmt"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/suite"
 	"os"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/suite"
 )
 
 type CalculatorSuite struct {
@@ -89,4 +90,15 @@ func (s *CalculatorSuite) Test_Calculate() {
 		})
 	}
 
+}
+
+// run in the directory of the test file
+// go test -bench=. -cpu=8 -benchmem -benchtime=5s -count 5
+func BenchmarkCalculate(b *testing.B) {
+	directory, _ := os.Getwd()
+	inputData := input.ReadFromFile(fmt.Sprintf("%s/%s", directory, "_testdata/test_case_1_input.txt"))
+
+	for i := 0; i < b.N; i++ {
+		Calculate(inputData[0])
+	}
 }
